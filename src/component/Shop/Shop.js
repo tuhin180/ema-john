@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { cartContext, productContext } from "../../Layouts/Main";
+import { cartContext, productContext } from "../../Layouts/RootLayout";
 import { addToDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import SingleProduct from "../SingleProduct/SingleProduct";
