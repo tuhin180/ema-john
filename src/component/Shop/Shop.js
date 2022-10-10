@@ -112,12 +112,13 @@ const Shop = () => {
                   <span>Total</span>
                   <span className="font-semibold">${total}</span>
                 </div>
-                <button
+                <Link
+                  to="/orders"
                   type="button"
                   className="w-full py-2 font-semibold border rounded dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400"
                 >
                   Go to checkout
-                </button>
+                </Link>
               </div>
             </div>
           </div>

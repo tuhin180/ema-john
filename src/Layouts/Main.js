@@ -10,7 +10,7 @@ const Main = () => {
   const { products, initialCart } = useLoaderData();
 
   const [cart, setCart] = useState(initialCart);
-  console.log(initialCart);
+
   return (
     <productContext.Provider value={products}>
       <cartContext.Provider value={[cart, setCart]}>

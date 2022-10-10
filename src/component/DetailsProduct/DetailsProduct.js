@@ -1,7 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useParams } from "react-router-dom";
+import { productContext } from "../../Layouts/Main";
 
 const DetailsProduct = () => {
+  const product = useContext(productContext);
+  const param = useParams();
+  console.log(param);
+
   return (
     <div>
       <section class="text-gray-600 body-font overflow-hidden">

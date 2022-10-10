@@ -1,8 +1,8 @@
-import React from "react";
-
 const SingleProduct = ({ product, handleAddToCart }) => {
-  const { name, img, price, ratings, seller } = product;
-
+  const { id, name, img, price, ratings, seller } = product;
+  // const handleProductDetails = (id) => {
+  //   console.log(id);
+  // };
   return (
     <div className="">
       <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto">
@@ -28,9 +28,13 @@ const SingleProduct = ({ product, handleAddToCart }) => {
             </span>
           </div>
           <div className="flex items-center justify-between px-3 py-2 bg-gray-200 dark:bg-gray-700">
-            <button className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">
+            <a
+              // onClick={() => handleProductDetails(id)}
+              href={"/details/pdetails"}
+              className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
+            >
               Details
-            </button>
+            </a>
             <button
               onClick={() => handleAddToCart(product)}
               className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"

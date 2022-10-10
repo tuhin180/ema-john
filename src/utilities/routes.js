@@ -6,6 +6,7 @@ import Inventory from "../component/Inventory/Inventory";
 import OrderReview from "../component/OrderReview/OrderReview";
 import Shop from "../component/Shop/Shop";
 import Main from "../Layouts/Main";
+import DetailsProduct from "../component/DetailsProduct/DetailsProduct";
 
 import { cartAndProductData } from "../Loader/getCart&ProductData";
 
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
         path: "/shop",
 
         element: <Shop></Shop>,
+      },
+      {
+        path: "/details/:pid",
+        element: <DetailsProduct></DetailsProduct>,
+
+        // element: <DetailsProduct></DetailsProduct>,
       },
       { path: "/orders", element: <OrderReview></OrderReview> },
       { path: "/inventory", element: <Inventory></Inventory> },
