@@ -46,7 +46,7 @@ const Shop = () => {
     <div className="mt-2">
       <h1 className="text-center text-2xl text-orange-400">Happy Shopping!!</h1>
       <div className="grid grid-cols-3 mt-4 gap-3">
-        <div className="col-span-2  grid grid-cols-3 gap-3">
+        <div className="col-span-2  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-3">
           {products.map((product) => (
             <SingleProduct
               key={product.id}
