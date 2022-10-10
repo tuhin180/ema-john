@@ -1,12 +1,7 @@
-import { useContext } from "react";
-import { Link, useParams } from "react-router-dom";
-import { productContext } from "../../Layouts/RootLayout";
+import { Link, useLoaderData } from "react-router-dom";
 
 const DetailsProduct = () => {
-  const { pid } = useParams();
-  const products = useContext(productContext);
-
-  const product = products.filter((p) => p.id === pid)[0];
+  const product = useLoaderData();
 
   return (
     <div>
