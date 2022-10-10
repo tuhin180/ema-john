@@ -5,15 +5,14 @@ import Home from "../component/Home/Home";
 import Inventory from "../component/Inventory/Inventory";
 import OrderReview from "../component/OrderReview/OrderReview";
 import Shop from "../component/Shop/Shop";
-import Main from "../Layouts/Main";
+import RootLayout from "../Layouts/RootLayout";
 import DetailsProduct from "../component/DetailsProduct/DetailsProduct";
 
 import { cartAndProductData } from "../Loader/getCart&ProductData";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Main> </Main>,
+    element: <RootLayout> </RootLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     loader: cartAndProductData,
 
