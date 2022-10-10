@@ -1,10 +1,10 @@
-import React, { createContext, useState } from "react";
+import { useState } from "react";
 import { Outlet, useLoaderData } from "react-router-dom";
+
+import { cartContext, productContext } from "../contexts/Contexts";
+
 import Footer from "../component/Footer/Footer";
 import Header from "../component/Header/Header";
-
-export const productContext = createContext([]);
-export const cartContext = createContext([]);
 
 const Main = () => {
   const { products, initialCart } = useLoaderData();

@@ -1,7 +1,21 @@
 import { Link, useLoaderData } from "react-router-dom";
 
+// uncomment this lines if you want to use context
+// import {useParams} from 'react-router-dom'
+// import { useContext } from "react";
+// import { productContext } from "../../contexts/Contexts";
+
 const DetailsProduct = () => {
+  // comment this line if you want to use context
+  // also don't forget to comment loader function in routes of /details
   const product = useLoaderData();
+
+  // uncomment this lines if you want to use context
+  /* 
+  const {pid} = useParams()
+  const products = useContext(productContext)
+  const product = products.find(p => p.id === pid)
+*/
 
   return (
     <div>

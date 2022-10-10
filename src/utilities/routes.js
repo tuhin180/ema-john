@@ -18,11 +18,7 @@ const router = createBrowserRouter([
     element: <RootLayout> </RootLayout>,
     errorElement: <ErrorPage></ErrorPage>,
     loader: cartAndProductData,
-    shouldRevalidate: ({ currentUrl }) => {
-      // only revalidate if the submission originates from
-      // the `/meal-plans/new` route.
-      return false;
-    },
+    shouldRevalidate: () => false,
 
     children: [
       { path: "/", element: <Home></Home> },
@@ -32,14 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:pid",
+        // comment this loader function if you want to use context
         loader: ({ params }) => {
           return fetchProducts(params.pid);
         },
-        shouldRevalidate: ({ currentUrl }) => {
-          // only revalidate if the submission originates from
-          // the `/meal-plans/new` route.
-          return false;
-        },
+        shouldRevalidate: () => false,
         element: <DetailsProduct></DetailsProduct>,
 
         // element: <DetailsProduct></DetailsProduct>,
